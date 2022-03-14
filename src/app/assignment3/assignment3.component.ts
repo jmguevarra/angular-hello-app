@@ -15,8 +15,8 @@ export class Assignment3Component implements OnInit {
   onShowHint(){
     const dt = new Date(Date.now()),
     month = dt.toLocaleString('default', {month: 'long'}),
-    dateTimeStamp = `Date: ${month} ${dt.getDate()}, ${dt.getFullYear()} ${dt.getHours()}:${dt.getMinutes()}:${dt.getSeconds()}`;
-
+    //dateTimeStamp = `Date: ${month} ${dt.getDate()}, ${dt.getFullYear()} ${dt.getHours()}:${dt.getMinutes()}:${dt.getSeconds()}`;
+    dateTimeStamp = new Date;
     this.showHint = true;
     setTimeout(() => this.showHint = false, 3000);
     this.hintLogs.push(dateTimeStamp);
