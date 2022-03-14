@@ -1,0 +1,24 @@
+<h2 class="mb-4">Assignment 3</h2>
+<p>Directives</p>
+
+<h6>Guidelines: </h6>
+<ol>
+    <li>Add a button which says 'Display Details'</li>
+    <li>Add a paragraph with any content of your choice (e.g. 'Secret Password = Tuna')</li>
+    <li>Toggle the displaying of that paragraph with the button created in th first step</li>
+    <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestap or simple an incrementing number)</li>
+    <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
+</ol>
+
+<h6>My Solution: </h6>
+<div class="directives-assignment">
+    <div class="row">
+        <div class="col-lg-8 col-md-10">
+            <input  type="button" value="Display Details" class="btn btn-primary mb-2" (click)="onShowHint()">
+            <p *ngIf="showHint">Password Hint: Your favorite video game.</p>
+            <ul id="ass3-datetime-stamp" class="list-group mt-3">
+                <li class="list-group-item" *ngFor="let dateTime of hintLogs; let i = index;" [attr.data-index]="i" [ngClass]="{ 'text-white': i >= 4 }" [ngStyle]="{'background-color': i >= 4 ? 'cornflowerblue' : 'white' }">{{ dateTime }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
