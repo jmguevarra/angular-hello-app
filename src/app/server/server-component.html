@@ -5,7 +5,17 @@
         <div class="col-md-8">
             <h4>Data Binding</h4>
             <button class="btn btn-primary mb-2" [disabled]="isCreated" (click)="onCreateServer()">Create Server</button>
-            <p><strong>Server Status:</strong> {{ serverCreationStatus }}</p>
+            <p><strong>Server Status:</strong>
+                 <!-- Simple solution invert the condition -->
+                <span *ngIf="serverCreated"> {{ serverCreationStatus }}</span>
+                <span *ngIf="!serverCreated"> no servers found</span>
+
+                <!-- Common solution of if else the condition -->
+                <!-- <span *ngIf="serverCreated; else noServer"> {{ serverCreationStatus }}</span>
+                <ng-template #noServer>
+                    <span> no servers found</span>
+                </ng-template> -->
+            </p>
         </div>
     </div>
 </div>
