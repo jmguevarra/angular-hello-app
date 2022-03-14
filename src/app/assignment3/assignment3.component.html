@@ -17,7 +17,12 @@
             <input  type="button" value="Display Details" class="btn btn-primary mb-2" (click)="onShowHint()">
             <p *ngIf="showHint">Password Hint: Your favorite video game.</p>
             <ul id="ass3-datetime-stamp" class="list-group mt-3">
-                <li class="list-group-item" *ngFor="let dateTime of hintLogs; let i = index;" [attr.data-index]="i" [ngClass]="{ 'text-white': i >= 4 }" [ngStyle]="{'background-color': i >= 4 ? 'cornflowerblue' : 'white' }">{{ dateTime }}</li>
+                <li class="list-group-item" 
+                    *ngFor="let hintLog of hintLogs; let i = index;"
+                    [attr.data-index]="i"
+                    [ngClass]="{ 'text-white': i >= 4 }" 
+                    [ngStyle]="{'background-color': i >= 4 ? 'cornflowerblue' : 'white' }"
+                >{{ hintLog }}</li>
             </ul>
         </div>
     </div>
