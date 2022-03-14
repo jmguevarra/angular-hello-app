@@ -19,9 +19,6 @@ export class Assignment2Component implements OnInit {
     this.isFieldReset = this.resetFields(tagValue);
   }
 
-  resetFields = (tagValue: string) => (tagValue == '' ? true : false);
+  resetFields = (tagValue: string) => (tagValue === '' ? true : false);
   onResetField = () => this.username = '';
-
-
-
 }

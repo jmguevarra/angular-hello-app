@@ -9,13 +9,23 @@
     <li>Upon Clicking the reset Button, the username shoult reset to an empty string</li>
 </ol>
 
-<h6>Solution: </h6>
+<h6>My Solution: </h6>
 <div class="data-binding-assignment">
     <div class="row">
         <div class="col-lg-8 col-md-10">
+            <label>Username:</label>
             <input type="text" name="username" id="username" class="form-control" [(ngModel)]="username" (input)="onUpdateUsername($event)">
             <p> {{ username }} </p>
             <input type="button" value="Reset" class="btn btn-primary" [disabled]="isFieldReset" (click)="onResetField()">
+        </div>
+    </div>
+</div>
+
+<p><strong>Best Solution for Reset Functionaility</strong> - Less Function and Varialbes needed</p>
+<div class="data-binding-assignment">
+    <div class="row">
+        <div class="col-lg-8 col-md-10">
+           <input type="button" value="Reset" class="btn btn-primary" [disabled]=" username === '' " (click)=" username='' ">
         </div>
     </div>
 </div>
