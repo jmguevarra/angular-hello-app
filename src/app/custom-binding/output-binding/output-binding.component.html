@@ -1,0 +1,21 @@
+<div class="cockpit-section py-2">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="cockpit-form">
+                <div class="form-group">
+                    <label for="server_name">Name</label>
+                    <input class="form-control" type="text" name="server_name" id="server_name" [(ngModel)]="newServerName">            
+                </div>
+                <div class="form-group">
+                    <label for="server_content">Content</label>
+                    <input class="form-control" type="text" name="server_content" id="server_content" [(ngModel)]="newServerContent">
+                </div>
+                <hr>
+                <div class="user-actions">
+                    <button type="button" class="btn btn-primary me-2" (click)="onAddedServer()">Add New Server</button>
+                    <button type="button" class="btn btn-primary" (click)="onAddedBlueprint()">Add Blueprint</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

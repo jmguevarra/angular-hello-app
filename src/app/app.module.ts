@@ -8,6 +8,9 @@ import { WarningAlert } from './warning-alert/warning-alert.component';
 import { ServerComponent } from './server/server-component';
 import { Assignment2Component } from './assignment2/assignment2.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
+import { CustomBindingComponent } from './custom-binding/custom-binding.component';
+import { InputBindingComponent } from './custom-binding/input-binding/input-binding.component';
+import { OutputBindingComponent } from './custom-binding/output-binding/output-binding.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { Assignment3Component } from './assignment3/assignment3.component';
     WarningAlert,
     ServerComponent,
     Assignment2Component,
-    Assignment3Component
+    Assignment3Component,
+    CustomBindingComponent,
+    InputBindingComponent,
+    OutputBindingComponent,
   ],
   imports: [
     BrowserModule,

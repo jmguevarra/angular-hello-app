@@ -1,0 +1,17 @@
+<h2 class="mb-4">Custom Property and Event Binding</h2>
+<p>
+    <b>@Input()</b> - fetching data form other components to the inside components.<br>
+    <b>@Output()</b> - Emitter of data from inside of component deliver to other components
+</p>
+
+<!-- @Output -->
+<app-output-binding
+(eventServerCreated)="onServerAdded($event)"
+(eventBlueprintCreated)="onBlueprintCreated($event)"
+></app-output-binding>
+
+<!-- @Input() -->
+<app-input-binding 
+*ngFor="let server of serverElements"
+[srvElement]="server">
+</app-input-binding>
