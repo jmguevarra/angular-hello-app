@@ -8,7 +8,11 @@
                 </div>
                 <div class="form-group">
                     <label for="server_content">Content</label>
-                    <input class="form-control" type="text" name="server_content" id="server_content" [(ngModel)]="newServerContent">
+                    <!-- 2 way binding with [(ngModel)]-->
+                    <!-- <input class="form-control" type="text" name="server_content" id="server_content" [(ngModel)]="newServerContent"> -->
+                    
+                    <!-- Local Binding with @ViewChild and #[nameofTag]-->
+                    <input class="form-control" type="text" name="server_content" id="server_content" #serverChildContentInput>
                 </div>
                 <hr>
                 <div class="user-actions">
