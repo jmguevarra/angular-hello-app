@@ -20,12 +20,14 @@ export class CustomBindingComponent implements OnInit {
     });
   }
 
-  onBlueprintCreated(blueprintData: {blueprintName: string, blueprintContent: string}){
+  onBlueprintCreated(blueprintData: {serverName: string, serverContent: string}){
     this.serverElements.push({
       type: 'blueprint',
-      name: blueprintData.blueprintName,
-      content: blueprintData.blueprintContent
+      name: blueprintData.serverName,
+      content: blueprintData.serverContent
     });
+    console.log(blueprintData, blueprintData.serverName, blueprintData.serverContent);
+    console.log(this.serverElements);
   }
 
 }
