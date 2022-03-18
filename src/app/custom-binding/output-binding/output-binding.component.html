@@ -4,7 +4,7 @@
             <form class="cockpit-form">
                 <div class="form-group">
                     <label for="server_name">Name</label>
-                    <input class="form-control" type="text" name="server_name" id="server_name" [(ngModel)]="newServerName">            
+                    <input class="form-control" type="text" name="server_name" id="server_name" #newServerNameInput>            
                 </div>
                 <div class="form-group">
                     <label for="server_content">Content</label>
@@ -12,8 +12,8 @@
                 </div>
                 <hr>
                 <div class="user-actions">
-                    <button type="button" class="btn btn-primary me-2" (click)="onAddedServer()">Add New Server</button>
-                    <button type="button" class="btn btn-primary" (click)="onAddedBlueprint()">Add Blueprint</button>
+                    <button type="button" class="btn btn-primary me-2" (click)="onAddedServer(newServerNameInput)">Add New Server</button>
+                    <button type="button" class="btn btn-primary" (click)="onAddedBlueprint(newServerNameInput)">Add Blueprint</button>
                 </div>
             </form>
         </div>
