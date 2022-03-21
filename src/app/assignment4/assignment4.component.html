@@ -1,0 +1,27 @@
+<h2 class="mb-4">Assignment 4</h2>
+<p>Game Controller</p>
+
+<h6>Guidelines: </h6>
+<ol>
+    <li>Create new 3 components GameControl, Odd, Even</li>
+    <li>The GameControl Comp should have buttons to start and stop the game</li>
+    <li>When Starting the game, an event (holding an increment number) should get emitted each second (ref=setInterval)</li>
+    <li>The event should be listenable from outsite the component</li>
+    <li>When stopping the game, no more events should get emitted (clearInterval)</li>
+    <li>A new Odd Component should get created for every odd numnber emitted, the same should happen for the Even Component</li>
+    <li>Simply output ODD - Number or Even  Number in the two components</li>
+    <li>Style the element(e.g paragraph) holding your output text differently in both component</li>
+</ol>
+
+<h6>My Solution: </h6>
+<div class="data-binding-assignment">
+    <div class="row">
+        <div class="col-lg-8 col-md-10">
+            <app-game-control (intervalFired)="getNumbers($event)"></app-game-control>
+            <div class="numbers-panel mt-3">
+                <app-odd *ngFor="let oddNumber of oddNumbers" [getOdd]="oddNumber"></app-odd>
+                <app-even *ngFor="let evenNumber of evenNumbers" [getEven]="evenNumber"></app-even>
+            </div>
+        </div>
+    </div>
+</div>

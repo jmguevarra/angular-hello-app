@@ -11,6 +11,10 @@ import { Assignment3Component } from './assignment3/assignment3.component';
 import { CustomBindingComponent } from './custom-binding/custom-binding.component';
 import { InputBindingComponent } from './custom-binding/input-binding/input-binding.component';
 import { OutputBindingComponent } from './custom-binding/output-binding/output-binding.component';
+import { Assignment4Component } from './assignment4/assignment4.component';
+import { GameControlComponent } from './assignment4/game-control/game-control.component';
+import { OddComponent } from './assignment4/odd/odd.component';
+import { EvenComponent } from './assignment4/even/even.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { OutputBindingComponent } from './custom-binding/output-binding/output-b
     CustomBindingComponent,
     InputBindingComponent,
     OutputBindingComponent,
+    Assignment4Component,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent,
   ],
   imports: [
     BrowserModule,
