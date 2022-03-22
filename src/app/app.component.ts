@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'Angular Hello';
   name = 'JM';
   strucDirective = 0;
+  ngSwitchValue = 20;
 }

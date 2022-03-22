@@ -56,6 +56,15 @@
         <p appBetterHighlights defaultColor="#eee" lightColor="cornflowerblue">This text has custom better directives</p>
         <h4 class="mt5">Structural Directive:</h4>
         <p *appUnless="strucDirective == 0">This is for Structural Directive: unless it strucDirective = 0 displays it.</p>
-
+        
+        <h4 class="mt5">ngSwitch:</h4>
+        <p>If you have lots of  if else condition displaying elements. Its better to use ngSwitch.</p>
+        <div class="ngswith-directives" [ngSwitch]="ngSwitchValue">
+            <p *ngSwitchCase="5">Value is 5</p>
+            <p *ngSwitchCase="10">Value is 10</p>
+            <p *ngSwitchCase="15">Value is 15</p>
+            <p *ngSwitchCase="20">Value is 20</p>
+            <p *ngSwitchCase="25">Value is 25</p>
+        </div>
     </div>
 </div>
