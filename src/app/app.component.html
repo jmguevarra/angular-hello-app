@@ -44,7 +44,18 @@
 
     <hr><!-- Custom Property and Event Bindind -->
     <div class="row custom-directives py-4">
-       <p highLightText>This text has custom basic directives</p>
-       <p appBetterHighlights>This text has custom better directives</p>
+        <h2 class="mb-4">Custom Directives - Attribute and Structural</h2>
+        <h4>Attribute Directive:</h4>
+        <ul class="list-group mb-4">
+            <li class="list-group-item"><strong>@HostListener</strong> - use to listen in different kind of event</li>
+            <li class="list-group-item"><strong>@HostBinding</strong> - can use to style or manipulate the DOM</li>
+            <li class="list-group-item"><strong>[attribute_name]</strong> -[] bracket used in the attribute directive or property binding </li>
+            <li class="list-group-item"><strong>attribute_name</strong> - attribute directive can have brackets or none</li>
+        </ul>
+        <p highLightText>This text has custom basic directives</p>
+        <p appBetterHighlights defaultColor="#eee" lightColor="cornflowerblue">This text has custom better directives</p>
+        <h4 class="mt5">Structural Directive:</h4>
+        <p *appUnless="strucDirective == 0">This is for Structural Directive: unless it strucDirective = 0 displays it.</p>
+
     </div>
 </div>
