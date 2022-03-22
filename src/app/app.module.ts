@@ -15,6 +15,8 @@ import { Assignment4Component } from './assignment4/assignment4.component';
 import { GameControlComponent } from './assignment4/game-control/game-control.component';
 import { OddComponent } from './assignment4/odd/odd.component';
 import { EvenComponent } from './assignment4/even/even.component';
+import { CustomDirectives } from './basic-hightlights/custom-directives';
+import { BetterHighlightsDirective } from './directives/better-highlights.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { EvenComponent } from './assignment4/even/even.component';
     GameControlComponent,
     OddComponent,
     EvenComponent,
+    CustomDirectives,
+    BetterHighlightsDirective
   ],
   imports: [
     BrowserModule,
