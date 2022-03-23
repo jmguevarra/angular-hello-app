@@ -1,0 +1,9 @@
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.user-name{
+    width: 100%;
+    max-width: 75px;
+    display: inline-block;
+}

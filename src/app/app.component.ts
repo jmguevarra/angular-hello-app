@@ -10,4 +10,5 @@ export class AppComponent {
   name = 'JM';
   strucDirective = 0;
   ngSwitchValue = 20;
+  option = 5;
 }
