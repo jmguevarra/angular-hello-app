@@ -22,6 +22,7 @@ import { Assignment5Component } from './assignment5/assignment5.component';
 import { ActiveUsersComponent } from './assignment5/active-users/active-users.component';
 import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-users.component';
 import { Users } from './shared/users.service';
+import { CounterService } from './shared/counter.services';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { Users } from './shared/users.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [Users],
+  providers: [Users, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

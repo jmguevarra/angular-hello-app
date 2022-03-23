@@ -1,3 +1,7 @@
+import { Injectable } from "@angular/core";
+import { CounterService } from "./counter.services";
+
+@Injectable()
 export class Users{
     users  =[
         {
@@ -26,11 +30,13 @@ export class Users{
         },
     ];
 
+    constructor(private counter: CounterService){}
+
     loadUsers(status: string){
         const activeUsers = this.users.filter(function(user){
             return user.status === status;
         });
-        
+        this.countUsers();
         return activeUsers;
     }
 
@@ -41,4 +47,13 @@ export class Users{
         });
     }
 
+    countUsers(){
+        let totalUsers = this.users.length;
+        let countActive = this.users.filter(function(user){
+            return user.status === 'Active';
+        });
+       
+        this.counter.setActiveUsers(countActive.length);
+        this.counter.setInactiveUsers(totalUsers - countActive.length);
+    }
 }
