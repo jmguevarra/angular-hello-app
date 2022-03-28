@@ -1,0 +1,30 @@
+<div class="row house-land routes py-4">
+    <ul class="nav nav-tabs mb-3">
+        <li class="nav-item">
+          <a class="nav-link" (click)="showHouseLand('house')">House</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showHouseLand('land')">Land</a>
+        </li>
+      </ul>
+      
+    <div class="col-lg-3 col-md-4 ps-0 ">
+        <div class="houses-wrapper" *ngIf="isHouseActive === true">
+            <ul class="list-group" 
+                *ngFor="let house of houses">
+                <li class="list-group-item my-1"> <a class="nav-link" [routerLink]="['/lectures/house-land/house', house.id]"> {{ house.name }} </a></li>
+            </ul>
+        </div>
+    
+        <div class="houses-wrapper" *ngIf="isLandActive === true">
+            <ul class="list-group" 
+                *ngFor="let land of lands">
+                <li class="list-group-item my-1"> <a class="nav-link" [routerLink]="['/lectures/house-land/land', land.id]"> {{ land.name }} </a></li>
+            </ul>
+        </div>
+    </div> 
+    <div class="col-lg-9 col-md-8">
+        <router-outlet></router-outlet>
+    </div> 
+    
+</div>

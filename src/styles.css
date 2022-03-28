@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+a.nav-link{
+    color:#414141;
+    cursor: pointer;
+    text-decoration: none;
+}
+h1.page-title{
+    font-weight: 700;
+    color:cornflowerblue;
+
+}
+.shadow-breaker {
+    background-image: linear-gradient(93deg, #195edb 20%, #ffffff 60%);
+    height: 10px !important;
+}

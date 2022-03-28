@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
@@ -23,6 +24,25 @@ import { ActiveUsersComponent } from './assignment5/active-users/active-users.co
 import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-users.component';
 import { Users } from './shared/users.service';
 import { CounterService } from './shared/counter.services';
+import { AssignmentsComponent } from './assignments/assignments.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { LecturesComponent } from './lectures/lectures.component';
+import { HouseLandComponent } from './lectures/house-land/house-land.component';
+import { HouseComponent } from './lectures/house-land/house/house.component';
+import { LandComponent } from './lectures/house-land/land/land.component';
+import { DropdownDirective } from './shared/dropdown-directive';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'assignment', component: AssignmentsComponent},
+  { path: 'lectures', component: LecturesComponent, children: [
+    { path: 'house-land', component: HouseLandComponent, children:[
+      { path: 'house/:id', component: HouseComponent},
+      { path: 'land/:id', component: LandComponent},
+    ]},
+  ]},
+];
 
 @NgModule({
   declarations: [
@@ -44,11 +64,19 @@ import { CounterService } from './shared/counter.services';
     UnlessDirective,
     Assignment5Component,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    HomeComponent,
+    HeaderComponent,
+    LecturesComponent,
+    HouseLandComponent,
+    HouseComponent,
+    LandComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [Users, CounterService],
   bootstrap: [AppComponent]
