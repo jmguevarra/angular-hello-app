@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
@@ -33,19 +32,8 @@ import { HouseComponent } from './lectures/house-land/house/house.component';
 import { LandComponent } from './lectures/house-land/land/land.component';
 import { DropdownDirective } from './shared/dropdown-directive';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'assignment', component: AssignmentsComponent},
-  { path: 'lectures', component: LecturesComponent, children: [
-    { path: 'house-land', component: HouseLandComponent, children:[
-      { path: 'house/:id', component: HouseComponent},
-      { path: 'land/:id', component: LandComponent},
-    ]},
-  ]},
-  {path: 'not-found', component: PageNotFoundComponent},
-  {path: '**', redirectTo: '/not-found', pathMatch: 'full'}
-];
 
 @NgModule({
   declarations: [
@@ -80,7 +68,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [Users, CounterService],
   bootstrap: [AppComponent]
