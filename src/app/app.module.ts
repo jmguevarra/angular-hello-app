@@ -32,6 +32,7 @@ import { HouseLandComponent } from './lectures/house-land/house-land.component';
 import { HouseComponent } from './lectures/house-land/house/house.component';
 import { LandComponent } from './lectures/house-land/land/land.component';
 import { DropdownDirective } from './shared/dropdown-directive';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -42,6 +43,8 @@ const appRoutes: Routes = [
       { path: 'land/:id', component: LandComponent},
     ]},
   ]},
+  {path: 'not-found', component: PageNotFoundComponent},
+  {path: '**', redirectTo: '/not-found', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -71,7 +74,8 @@ const appRoutes: Routes = [
     HouseLandComponent,
     HouseComponent,
     LandComponent,
-    DropdownDirective
+    DropdownDirective,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
